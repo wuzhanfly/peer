@@ -43,49 +43,7 @@ func main() {
 
 }
 
-//
-//func InitInterval() {
-//	var timeout string = "0/30 * * * * *" // 定时器时间区间，默认精度为30s/次：0,30 * * * * *
-//	var intervalId int                    // 定时器id
-//
-//	go func() {
-//		num := 0 // 运行次数
-//		// 设置时区
-//		local, _ := time.LoadLocation("Local")
-//		interval := cron.New(cron.WithLocation(local), cron.WithSeconds()) // 设置时区并且精度按秒。
-//		_timeout := timeout
-//		_intervalId, err := interval.AddFunc(_timeout, func() {
-//			num++
-//			// 下面调用其他函数
-//			TimeInterval(intervalId, num, _timeout)
-//
-//		})
-//		if err != nil {
-//			os.Exit(200)
-//		}
-//		intervalId = int(_intervalId)
-//		interval.Start()
-//
-//		//关闭着计划任务, 但是不能关闭已经在执行中的任务.
-//		defer interval.Stop()
-//		select {} // 阻塞主线程而不退出
-//
-//	}()
-//}
-//
-//func TimeInterval(intervalId int, num int, timeout string) {
-//	var maxLog int = 5
-//	if num < maxLog { // 不必全部打印，只打印前几个即可
-//		if intervalId == 0 && num == 0 {
-//
-//		} else {
-//		}
-//	} else if num == maxLog {
-//	}
-//
-//	// 其他任务
-//	PeerInfo()
-//}
+
 
 func PeerInfo() {
 	var ctx = context.TODO()
